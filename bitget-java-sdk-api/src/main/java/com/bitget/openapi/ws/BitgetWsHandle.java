@@ -16,6 +16,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.Validate;
 
 import java.math.BigDecimal;
+import java.net.InetSocketAddress;
 import java.net.Proxy;
 import java.time.Instant;
 import java.util.*;
@@ -416,6 +417,18 @@ public class BitgetWsHandle implements BitgetWsClient {
 
         public BitgetClientBuilder proxy(Proxy proxy) {
             this.proxy = proxy;
+            return this;
+        }
+
+        /**
+         * 设置代理
+         * @param type 代理类型
+         * @param hostname 主机名
+         * @param port 端口号
+         * @return
+         */
+        public BitgetClientBuilder proxy(Proxy.Type type,String hostname, int port) {
+            this.proxy = new Proxy(type, new InetSocketAddress(hostname, port));
             return this;
         }
 
