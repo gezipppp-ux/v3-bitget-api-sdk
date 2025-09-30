@@ -53,7 +53,7 @@ public class SignatureUtils {
         queryString = StringUtils.isBlank(queryString) ? StringUtils.EMPTY : "?" + queryString;
 
         String preHash = timestamp + method + requestPath + queryString + body;
-        System.out.println(preHash);
+//        System.out.println(preHash);
         byte[] secretKeyBytes = secretKey.getBytes(SignatureUtils.CHARSET);
         SecretKeySpec secretKeySpec = new SecretKeySpec(secretKeyBytes, SignatureUtils.HMAC_SHA256);
         Mac mac = (Mac) SignatureUtils.MAC.clone();
@@ -83,7 +83,7 @@ public class SignatureUtils {
         queryString = StringUtils.isBlank(queryString) ? StringUtils.EMPTY : "?" + queryString;
 
         String preHash = timestamp + method + requestPath + queryString + body;
-        System.out.println(preHash);
+//        System.out.println(preHash);
         return genRsaSignature(preHash, secretKey);
     }
 

@@ -62,5 +62,5 @@ public class ClientParameter {
      /**
      * 是否是模拟交易
      */
-    private boolean isPapTrading = false;
+    private boolean papTrading = false;
 }

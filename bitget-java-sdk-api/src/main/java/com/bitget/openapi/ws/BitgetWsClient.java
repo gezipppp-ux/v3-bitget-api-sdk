@@ -18,4 +18,6 @@ public interface BitgetWsClient {
     void subscribe(List<SubscribeReq> list, SubscriptionListener listener);
 
     void login();
+
+    void close();
 }

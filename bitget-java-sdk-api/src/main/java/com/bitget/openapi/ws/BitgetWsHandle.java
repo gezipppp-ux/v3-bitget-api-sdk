@@ -142,6 +142,14 @@ public class BitgetWsHandle implements BitgetWsClient {
         log.info("WebSocket登录成功");
     }
 
+    @Override
+    public void close() {
+        if (webSocket != null) {  // 增加空值判断
+            webSocket.close(1000, "close");
+            webSocket = null;
+        }
+    }
+
     private List<WsLoginReq> buildArgs() {
         String timestamp = Long.valueOf(Instant.now().getEpochSecond()).toString();
         String sign = sha256_HMAC(timestamp, builder.secretKey);
@@ -346,8 +354,10 @@ public class BitgetWsHandle implements BitgetWsClient {
         private void close() {
             loginStatus = false;
             connectStatus = false;
-            webSocket.close(1000, "Long time no message was sent or received！");
-            webSocket = null;
+            if (webSocket != null) {  // 增加空值判断
+                webSocket.close(1000, "Long time no message was sent or received！");
+                webSocket = null;
+            }
         }
 
         private void reConnect() {
