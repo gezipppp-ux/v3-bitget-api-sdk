@@ -50,7 +50,7 @@ public class MixOrderService {
         return ResponseUtils.handleResponse(mixOrderApi.placePlanOrder(paramMap).execute().body());
     }
 
-    public ResponseResult cancelPlanOrder(Map<String, String> paramMap) throws IOException {
+    public ResponseResult cancelPlanOrder(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixOrderApi.cancelPlanOrder(paramMap).execute().body());
     }
 

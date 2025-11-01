@@ -39,7 +39,7 @@ public interface MixOrderApi {
     Call<ResponseResult> placePlanOrder(@Body Map<String, String> paramMap);
 
     @POST("/api/v2/mix/order/cancel-plan-order")
-    Call<ResponseResult> cancelPlanOrder(@Body Map<String, String> paramMap);
+    Call<ResponseResult> cancelPlanOrder(@Body Map<String, Object> paramMap);
 
     @GET("/api/v2/mix/order/orders-plan-pending")
     Call<ResponseResult> ordersPlanPending(@QueryMap Map<String, String> paramMap);
