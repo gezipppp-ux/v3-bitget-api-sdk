@@ -44,6 +44,14 @@ public class MixOrderService {
         return ResponseUtils.handleResponse(mixOrderApi.fills(paramMap).execute().body());
     }
 
+    public ResponseResult placeTPSLOrder(Map<String, Object> paramMap) throws IOException {
+        return ResponseUtils.handleResponse(mixOrderApi.placeTPSLOrder(paramMap).execute().body());
+    }
+
+    public ResponseResult placePosTPSLOrder(Map<String, Object> paramMap) throws IOException {
+        return ResponseUtils.handleResponse(mixOrderApi.placePosTPSLOrder(paramMap).execute().body());
+    }
+
 
 
     public ResponseResult placePlanOrder(Map<String, Object> paramMap) throws IOException {

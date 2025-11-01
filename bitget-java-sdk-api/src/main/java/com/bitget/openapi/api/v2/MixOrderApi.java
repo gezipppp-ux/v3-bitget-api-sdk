@@ -34,9 +34,16 @@ public interface MixOrderApi {
     Call<ResponseResult> fills(@QueryMap Map<String, Object> paramMap);
 
 
+
     // plan
     @POST("/api/v2/mix/order/place-plan-order")
     Call<ResponseResult> placePlanOrder(@Body Map<String, Object> paramMap);
+
+    @GET("/api/v2/mix/order/place-tpsl-order")
+    Call<ResponseResult> placeTPSLOrder(@Body Map<String, Object> paramMap);
+
+    @GET("/api/v2/mix/order/place-pos-tpsl")
+    Call<ResponseResult> placePosTPSLOrder(@Body Map<String, Object> paramMap);
 
     @POST("/api/v2/mix/order/cancel-plan-order")
     Call<ResponseResult> cancelPlanOrder(@Body Map<String, Object> paramMap);
