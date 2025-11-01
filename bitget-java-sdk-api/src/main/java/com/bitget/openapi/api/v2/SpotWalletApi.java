@@ -12,17 +12,17 @@ import java.util.Map;
 public interface SpotWalletApi {
 
     @POST("/api/v2/spot/wallet/transfer")
-    Call<ResponseResult> transfer(@Body Map<String, String> paramMap);
+    Call<ResponseResult> transfer(@Body Map<String, Object> paramMap);
 
     @GET("/api/v2/spot/wallet/deposit-address")
-    Call<ResponseResult> depositAddress(@QueryMap Map<String, String> paramMap);
+    Call<ResponseResult> depositAddress(@QueryMap Map<String, Object> paramMap);
 
     @POST("/api/v2/spot/wallet/withdrawal")
-    Call<ResponseResult> withdrawal(@Body Map<String, String> paramMap);
+    Call<ResponseResult> withdrawal(@Body Map<String, Object> paramMap);
 
     @GET("/api/v2/spot/wallet/withdrawal-records")
-    Call<ResponseResult> withdrawalRecords(@QueryMap Map<String, String> paramMap);
+    Call<ResponseResult> withdrawalRecords(@QueryMap Map<String, Object> paramMap);
 
     @GET("/api/v2/spot/wallet/deposit-records")
-    Call<ResponseResult> depositRecords(@QueryMap Map<String, String> paramMap);
+    Call<ResponseResult> depositRecords(@QueryMap Map<String, Object> paramMap);
 }

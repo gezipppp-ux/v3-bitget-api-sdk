@@ -56,7 +56,7 @@ private BitgetRestClient bitgetRestClient;
 
 ## Demo 1: place order
 ```java
-Map<String, String> paramMap = Maps.newHashMap();
+Map<String, Object> paramMap = Maps.newHashMap();
 paramMap.put("symbol", "BTCUSDT_UMCBL");
 paramMap.put("marginCoin", "USDT");
 paramMap.put("side", "open_long");
@@ -70,8 +70,8 @@ System.out.println(JSON.toJSONString(result));
 
 ## Demo 2: send post request directly If the interface is not defined in the sdk
 ```java
-Map<String, String> paramMap = Maps.newHashMap();
-Map<String, String> paramMap = Maps.newHashMap();
+Map<String, Object> paramMap = Maps.newHashMap();
+Map<String, Object> paramMap = Maps.newHashMap();
 paramMap.put("symbol", "BTCUSDT_UMCBL");
 paramMap.put("marginCoin", "USDT");
 paramMap.put("side", "open_long");
@@ -85,7 +85,7 @@ System.out.println(JSON.toJSONString(result));
 
 ## Demo 3: send get request directly If the interface is not defined in the sdk
 ```java
-Map<String, String> paramMap = Maps.newHashMap();
+Map<String, Object> paramMap = Maps.newHashMap();
 paramMap.put("symbol", "BTCUSDT_UMCBL");
 paramMap.put("startTime", "1695632659703");
 paramMap.put("endTime", "1695635659703");
@@ -102,10 +102,10 @@ If not provided, the default baseUrl is `https://api.bitget.com`<br/>
 
 ## Optional parameters
 
-All parameters are read from a `HashMap<String,String>` object where `String` is the name of the parameter and `String` is the value of the parameter. 
+All parameters are read from a `HashMap<String, Object>` object where `String` is the name of the parameter and `String` is the value of the parameter. 
 The parameters should follow their exact naming as in the API documentation.<br>
 ```java
-Map<String,String> paramMap = Maps.newHashMap();
+Map<String, Object> paramMap = Maps.newHashMap();
 paramMap.put("symbol","BTCUSDT_UMCBL");
 paramMap.put("marginCoin","USDT");
 paramMap.put("side","open_long");

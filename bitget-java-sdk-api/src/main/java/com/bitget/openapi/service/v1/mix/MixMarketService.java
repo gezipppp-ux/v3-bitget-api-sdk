@@ -16,27 +16,27 @@ public class MixMarketService {
         mixMarketApi = client.create(MixMarketApi.class);
     }
 
-    public ResponseResult contracts(Map<String,String> paramMap) throws IOException {
+    public ResponseResult contracts(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixMarketApi.contracts(paramMap).execute().body());
     }
 
-    public ResponseResult depth(Map<String,String> paramMap) throws IOException {
+    public ResponseResult depth(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixMarketApi.depth(paramMap).execute().body());
     }
 
-    public ResponseResult ticker(Map<String,String> paramMap) throws IOException {
+    public ResponseResult ticker(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixMarketApi.ticker(paramMap).execute().body());
     }
 
-    public ResponseResult tickers(Map<String,String> paramMap) throws IOException {
+    public ResponseResult tickers(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixMarketApi.tickers(paramMap).execute().body());
     }
 
-    public ResponseResult fills(Map<String,String> paramMap) throws IOException {
+    public ResponseResult fills(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixMarketApi.fills(paramMap).execute().body());
     }
 
-    public ResponseResult candles(Map<String,String> paramMap) throws IOException {
+    public ResponseResult candles(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixMarketApi.candles(paramMap).execute().body());
     }
 

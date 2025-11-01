@@ -10,22 +10,22 @@ import java.util.Map;
 public interface MixMarketApi {
 
     @GET("/api/mix/v1/market/contracts")
-    Call<ResponseResult> contracts(@QueryMap Map<String, String> paramMap);
+    Call<ResponseResult> contracts(@QueryMap Map<String, Object> paramMap);
 
     @GET("/api/mix/v1/market/depth")
-    Call<ResponseResult> depth(@QueryMap Map<String, String> paramMap);
+    Call<ResponseResult> depth(@QueryMap Map<String, Object> paramMap);
 
     @GET("/api/mix/v1/market/ticker")
-    Call<ResponseResult> ticker(@QueryMap Map<String, String> paramMap);
+    Call<ResponseResult> ticker(@QueryMap Map<String, Object> paramMap);
 
     @GET("/api/mix/v1/market/tickers")
-    Call<ResponseResult> tickers(@QueryMap Map<String, String> paramMap);
+    Call<ResponseResult> tickers(@QueryMap Map<String, Object> paramMap);
 
     @GET("/api/mix/v1/market/fills")
-    Call<ResponseResult> fills(@QueryMap Map<String, String> paramMap);
+    Call<ResponseResult> fills(@QueryMap Map<String, Object> paramMap);
 
     @GET("/api/mix/v1/market/candles")
-    Call<ResponseResult> candles(@QueryMap Map<String, String> paramMap);
+    Call<ResponseResult> candles(@QueryMap Map<String, Object> paramMap);
 
 }
 

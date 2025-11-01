@@ -16,35 +16,35 @@ public class MixAccountService {
         mixAccountApi = client.create(MixAccountApi.class);
     }
 
-    public ResponseResult getAccount(Map<String,String> paramMap) throws IOException {
+    public ResponseResult getAccount(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixAccountApi.account(paramMap).execute().body());
     }
 
-    public ResponseResult getAccounts(Map<String,String> paramMap) throws IOException {
+    public ResponseResult getAccounts(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixAccountApi.accounts(paramMap).execute().body());
     }
 
-    public ResponseResult setLeverage(Map<String,String> paramMap) throws IOException {
+    public ResponseResult setLeverage(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixAccountApi.setLeverage(paramMap).execute().body());
     }
 
-    public ResponseResult setMargin(Map<String,String> paramMap) throws IOException {
+    public ResponseResult setMargin(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixAccountApi.setMargin(paramMap).execute().body());
     }
 
-    public ResponseResult setMarginMode(Map<String,String> paramMap) throws IOException {
+    public ResponseResult setMarginMode(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixAccountApi.setMarginMode(paramMap).execute().body());
     }
 
-    public ResponseResult setPositionMode(Map<String,String> paramMap) throws IOException {
+    public ResponseResult setPositionMode(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixAccountApi.setPositionMode(paramMap).execute().body());
     }
 
-    public ResponseResult singlePosition(Map<String,String> paramMap) throws IOException {
+    public ResponseResult singlePosition(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixAccountApi.singlePosition(paramMap).execute().body());
     }
 
-    public ResponseResult allPosition(Map<String,String> paramMap) throws IOException {
+    public ResponseResult allPosition(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixAccountApi.allPosition(paramMap).execute().body());
     }
 }

@@ -16,19 +16,19 @@ public class SpotMarketService {
         spotMarketApi = client.create(SpotMarketApi.class);
     }
 
-    public ResponseResult coins(Map<String,String> paramMap) throws IOException {
+    public ResponseResult coins(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(spotMarketApi.coins(paramMap).execute().body());
     }
 
-    public ResponseResult symbols(Map<String,String> paramMap) throws IOException {
+    public ResponseResult symbols(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(spotMarketApi.symbols(paramMap).execute().body());
     }
 
-    public ResponseResult fills(Map<String,String> paramMap) throws IOException {
+    public ResponseResult fills(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(spotMarketApi.fills(paramMap).execute().body());
     }
 
-    public ResponseResult orderbook(Map<String,String> paramMap) throws IOException {
+    public ResponseResult orderbook(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(spotMarketApi.orderbook(paramMap).execute().body());
     }
 
@@ -36,7 +36,7 @@ public class SpotMarketService {
         return ResponseUtils.handleResponse(spotMarketApi.tickers().execute().body());
     }
 
-    public ResponseResult candles(Map<String,String> paramMap) throws IOException {
+    public ResponseResult candles(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(spotMarketApi.candles(paramMap).execute().body());
     }
 }

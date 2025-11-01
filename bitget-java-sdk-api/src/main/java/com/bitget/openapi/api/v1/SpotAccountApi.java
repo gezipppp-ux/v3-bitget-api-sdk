@@ -12,14 +12,14 @@ import java.util.Map;
 public interface SpotAccountApi {
 
     @GET("/api/spot/v1/account/getInfo")
-    Call<ResponseResult> getInfo(@QueryMap Map<String, String> paramMap);
+    Call<ResponseResult> getInfo(@QueryMap Map<String, Object> paramMap);
 
     @GET("/api/spot/v1/account/assets-lite")
-    Call<ResponseResult> assetsLite(@QueryMap Map<String, String> paramMap);
+    Call<ResponseResult> assetsLite(@QueryMap Map<String, Object> paramMap);
 
     @POST("/api/spot/v1/account/bills")
-    Call<ResponseResult> bills(@Body Map<String, String> paramMap);
+    Call<ResponseResult> bills(@Body Map<String, Object> paramMap);
 
     @GET("/api/spot/v1/account/transferRecords")
-    Call<ResponseResult> transferRecords(@QueryMap Map<String, String> paramMap);
+    Call<ResponseResult> transferRecords(@QueryMap Map<String, Object> paramMap);
 }

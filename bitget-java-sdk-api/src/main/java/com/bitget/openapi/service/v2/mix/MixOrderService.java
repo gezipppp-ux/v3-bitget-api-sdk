@@ -16,37 +16,37 @@ public class MixOrderService {
         mixOrderApi = client.create(MixOrderApi.class);
     }
 
-    public ResponseResult placeOrder(Map<String, String> paramMap) throws IOException {
+    public ResponseResult placeOrder(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixOrderApi.placeOrder(paramMap).execute().body());
     }
 
-    public ResponseResult batchPlaceOrder(Map<String, String> paramMap) throws IOException {
+    public ResponseResult batchPlaceOrder(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixOrderApi.batchPlaceOrder(paramMap).execute().body());
     }
 
-    public ResponseResult cancelOrder(Map<String, String> paramMap) throws IOException {
+    public ResponseResult cancelOrder(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixOrderApi.cancelOrder(paramMap).execute().body());
     }
 
-    public ResponseResult batchCancelOrders(Map<String, String> paramMap) throws IOException {
+    public ResponseResult batchCancelOrders(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixOrderApi.batchCancelOrders(paramMap).execute().body());
     }
 
-    public ResponseResult ordersHistory(Map<String, String> paramMap) throws IOException {
+    public ResponseResult ordersHistory(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixOrderApi.ordersHistory(paramMap).execute().body());
     }
 
-    public ResponseResult ordersPending(Map<String, String> paramMap) throws IOException {
+    public ResponseResult ordersPending(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixOrderApi.ordersPending(paramMap).execute().body());
     }
 
-    public ResponseResult fills(Map<String, String> paramMap) throws IOException {
+    public ResponseResult fills(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixOrderApi.fills(paramMap).execute().body());
     }
 
 
 
-    public ResponseResult placePlanOrder(Map<String, String> paramMap) throws IOException {
+    public ResponseResult placePlanOrder(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixOrderApi.placePlanOrder(paramMap).execute().body());
     }
 
@@ -54,37 +54,37 @@ public class MixOrderService {
         return ResponseUtils.handleResponse(mixOrderApi.cancelPlanOrder(paramMap).execute().body());
     }
 
-    public ResponseResult ordersPlanPending(Map<String, String> paramMap) throws IOException {
+    public ResponseResult ordersPlanPending(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixOrderApi.ordersPlanPending(paramMap).execute().body());
     }
 
-    public ResponseResult ordersPlanHistory(Map<String, String> paramMap) throws IOException {
+    public ResponseResult ordersPlanHistory(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixOrderApi.ordersPlanHistory(paramMap).execute().body());
     }
 
 
 
-    public ResponseResult traderOrderClosePositions(Map<String, String> paramMap) throws IOException {
+    public ResponseResult traderOrderClosePositions(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixOrderApi.traderOrderClosePositions(paramMap).execute().body());
     }
 
-    public ResponseResult traderOrderCurrentTrack(Map<String, String> paramMap) throws IOException {
+    public ResponseResult traderOrderCurrentTrack(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixOrderApi.traderOrderCurrentTrack(paramMap).execute().body());
     }
 
-    public ResponseResult traderOrderHistoryTrack(Map<String, String> paramMap) throws IOException {
+    public ResponseResult traderOrderHistoryTrack(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixOrderApi.traderOrderHistoryTrack(paramMap).execute().body());
     }
 
-    public ResponseResult followerClosePositions(Map<String, String> paramMap) throws IOException {
+    public ResponseResult followerClosePositions(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixOrderApi.followerClosePositions(paramMap).execute().body());
     }
 
-    public ResponseResult followerQueryCurrentOrders(Map<String, String> paramMap) throws IOException {
+    public ResponseResult followerQueryCurrentOrders(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixOrderApi.followerQueryCurrentOrders(paramMap).execute().body());
     }
 
-    public ResponseResult followerQueryHistoryOrders(Map<String, String> paramMap) throws IOException {
+    public ResponseResult followerQueryHistoryOrders(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(mixOrderApi.followerQueryHistoryOrders(paramMap).execute().body());
     }
 

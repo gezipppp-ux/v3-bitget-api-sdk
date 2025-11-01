@@ -21,19 +21,19 @@ public class SpotAccountService {
         spotAccountApi = client.create(SpotAccountApi.class);
     }
 
-    public ResponseResult getInfo(Map<String,String> paramMap) throws IOException {
+    public ResponseResult getInfo(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(spotAccountApi.getInfo(paramMap).execute().body());
     }
 
-    public ResponseResult assetsLite(Map<String,String> paramMap) throws IOException {
+    public ResponseResult assetsLite(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(spotAccountApi.assetsLite(paramMap).execute().body());
     }
 
-    public ResponseResult bills(Map<String,String> paramMap) throws IOException {
+    public ResponseResult bills(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(spotAccountApi.bills(paramMap).execute().body());
     }
 
-    public ResponseResult transferRecords(Map<String,String> paramMap) throws IOException {
+    public ResponseResult transferRecords(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(spotAccountApi.transferRecords(paramMap).execute().body());
     }
 }

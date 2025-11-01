@@ -10,20 +10,20 @@ import java.util.Map;
 public interface SpotMarketApi {
 
     @GET("/api/v2/spot/public/coins")
-    Call<ResponseResult> coins(@QueryMap Map<String, String> paramMap);
+    Call<ResponseResult> coins(@QueryMap Map<String, Object> paramMap);
 
     @GET("/api/v2/spot/public/symbols")
-    Call<ResponseResult> symbols(@QueryMap Map<String, String> paramMap);
+    Call<ResponseResult> symbols(@QueryMap Map<String, Object> paramMap);
 
     @GET("/api/v2/spot/market/fills")
-    Call<ResponseResult> fills(@QueryMap Map<String, String> paramMap);
+    Call<ResponseResult> fills(@QueryMap Map<String, Object> paramMap);
 
     @GET("/api/v2/spot/market/orderbook")
-    Call<ResponseResult> orderbook(@QueryMap Map<String, String> paramMap);
+    Call<ResponseResult> orderbook(@QueryMap Map<String, Object> paramMap);
 
     @GET("/api/v2/spot/market/tickers")
     Call<ResponseResult> tickers();
 
     @GET("/api/v2/spot/market/candles")
-    Call<ResponseResult> candles(@QueryMap Map<String, String> paramMap);
+    Call<ResponseResult> candles(@QueryMap Map<String, Object> paramMap);
 }

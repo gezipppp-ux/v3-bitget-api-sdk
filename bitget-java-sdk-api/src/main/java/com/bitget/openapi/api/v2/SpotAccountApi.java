@@ -14,11 +14,11 @@ public interface SpotAccountApi {
     Call<ResponseResult> info();
 
     @GET("/api/v2/spot/account/assets")
-    Call<ResponseResult> assets(@QueryMap Map<String, String> paramMap);
+    Call<ResponseResult> assets(@QueryMap Map<String, Object> paramMap);
 
     @GET("/api/v2/spot/account/bills")
-    Call<ResponseResult> bills(@QueryMap Map<String, String> paramMap);
+    Call<ResponseResult> bills(@QueryMap Map<String, Object> paramMap);
 
     @GET("/api/v2/spot/account/transferRecords")
-    Call<ResponseResult> transferRecords(@QueryMap Map<String, String> paramMap);
+    Call<ResponseResult> transferRecords(@QueryMap Map<String, Object> paramMap);
 }

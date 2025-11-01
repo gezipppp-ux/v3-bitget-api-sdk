@@ -17,20 +17,20 @@ public interface SpotMarketApi {
     Call<ResponseResult> products();
 
     @GET("/api/spot/v1/public/product")
-    Call<ResponseResult> product(@QueryMap Map<String, String> paramMap);
+    Call<ResponseResult> product(@QueryMap Map<String, Object> paramMap);
 
     @GET("/api/spot/v1/market/fills")
-    Call<ResponseResult> fills(@QueryMap Map<String, String> paramMap);
+    Call<ResponseResult> fills(@QueryMap Map<String, Object> paramMap);
 
     @GET("/api/spot/v1/market/depth")
-    Call<ResponseResult> depth(@QueryMap Map<String, String> paramMap);
+    Call<ResponseResult> depth(@QueryMap Map<String, Object> paramMap);
 
     @GET("/api/spot/v1/market/ticker")
-    Call<ResponseResult> ticker(@QueryMap Map<String, String> paramMap);
+    Call<ResponseResult> ticker(@QueryMap Map<String, Object> paramMap);
 
     @GET("/api/spot/v1/market/tickers")
     Call<ResponseResult> tickers();
 
     @GET("/api/spot/v1/market/candles")
-    Call<ResponseResult> candles(@QueryMap Map<String, String> paramMap);
+    Call<ResponseResult> candles(@QueryMap Map<String, Object> paramMap);
 }

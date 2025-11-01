@@ -25,15 +25,15 @@ public class SpotAccountService {
         return ResponseUtils.handleResponse(spotAccountApi.info().execute().body());
     }
 
-    public ResponseResult assets(Map<String,String> paramMap) throws IOException {
+    public ResponseResult assets(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(spotAccountApi.assets(paramMap).execute().body());
     }
 
-    public ResponseResult bills(Map<String,String> paramMap) throws IOException {
+    public ResponseResult bills(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(spotAccountApi.bills(paramMap).execute().body());
     }
 
-    public ResponseResult transferRecords(Map<String,String> paramMap) throws IOException {
+    public ResponseResult transferRecords(Map<String, Object> paramMap) throws IOException {
         return ResponseUtils.handleResponse(spotAccountApi.transferRecords(paramMap).execute().body());
     }
 }

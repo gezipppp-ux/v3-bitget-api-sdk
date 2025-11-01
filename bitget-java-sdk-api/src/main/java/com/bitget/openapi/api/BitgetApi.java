@@ -9,8 +9,8 @@ import java.util.Map;
 public interface BitgetApi {
 
     @GET
-    Call<ResponseResult> sendGetRequest(@Url String url, @QueryMap Map<String, String> paramMap);
+    Call<ResponseResult> sendGetRequest(@Url String url, @QueryMap Map<String, Object> paramMap);
 
     @POST
-    Call<ResponseResult> sendPostRequest(@Url String url, @Body Map<String, String> paramMap);
+    Call<ResponseResult> sendPostRequest(@Url String url, @Body Map<String, Object> paramMap);
 }

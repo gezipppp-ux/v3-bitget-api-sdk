@@ -16,7 +16,7 @@ public class BitgetService {
         bitgetApi = client.create(BitgetApi.class);
     }
 
-    public ResponseResult get(String url, Map<String, String> paramMap) throws IOException {
+    public ResponseResult get(String url, Map<String, Object> paramMap) throws IOException {
         return bitgetApi.sendGetRequest(url, paramMap).execute().body();
     }
 
@@ -24,7 +24,7 @@ public class BitgetService {
         return get(url, Maps.newHashMap());
     }
 
-    public ResponseResult post(String url, Map<String, String> paramMap) throws IOException {
+    public ResponseResult post(String url, Map<String, Object> paramMap) throws IOException {
         return bitgetApi.sendPostRequest(url, paramMap).execute().body();
     }
 
